@@ -28,14 +28,13 @@ class Artist {
         let songCount = 0;
         for (let i = 0; i < this.playList.length; i++) {
             const song = this.playList[i];
-            this.wealthEarn += song.count * this.price;
             console.log(`${++songCount}. ${song.songName} (${song.count})`);
         }
     }
 
     playSong(index) {
         ++this.playList[index].count;
-        //console.log(this.playList[index]);
+        this.wealthEarn += this.price;
         console.log(`Playing song: ${this.playList[index].songName}`);
     }
 
